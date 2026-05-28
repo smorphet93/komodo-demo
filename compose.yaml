@@ -4,6 +4,6 @@ services:
     ports:
       - "${PORT:-3000}:3000"
     environment:
-      - APP_ENV=${APP_ENV:-development}
+      - APP_ENV=${APP_ENV:-dev}
       - PORT=3000
     restart: unless-stopped
