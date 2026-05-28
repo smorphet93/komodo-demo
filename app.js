@@ -8,22 +8,22 @@ const hostname = os.hostname();
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
   res.end(`
-    &lt;html&gt;
-      &lt;head&gt;
-        &lt;title&gt;Komodo Demo&lt;/title&gt;
-        &lt;style&gt;
+    <html>
+      <head>
+        <title>Komodo Demo</title>
+        <style>
           body { font-family: sans-serif; max-width: 600px; margin: 100px auto; text-align: center; }
           .env { display: inline-block; padding: 4px 12px; border-radius: 20px;
                  background: ${APP_ENV === "production" ? "#22c55e" : "#3b82f6"}; color: white; }
-        &lt;/style&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;h1&gt;🦎 Komodo Demo App&lt;/h1&gt;
-        &lt;p&gt;Environment: &lt;span class="env"&gt;${APP_ENV}&lt;/span&gt;&lt;/p&gt;
-        &lt;p&gt;Running on host: &lt;strong&gt;${hostname}&lt;/strong&gt;&lt;/p&gt;
-        &lt;p&gt;Deployed at: &lt;strong&gt;${new Date().toISOString()}&lt;/strong&gt;&lt;/p&gt;
-      &lt;/body&gt;
-    &lt;/html&gt;
+        </style>
+      </head>
+      <body>
+        <h1>🦎 Komodo Demo App</h1>
+        <p>Environment: <span class="env">${APP_ENV}</span></p>
+        <p>Running on host: <strong>${hostname}</strong></p>
+        <p>Deployed at: <strong>${new Date().toISOString()}</strong></p>
+      </body>
+    </html>
   `);
 });
 
