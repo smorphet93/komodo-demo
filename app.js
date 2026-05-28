@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
         </style>
       </head>
       <body>
-        <h1>🦎 Komodo Demo App</h1>
+        <h1>Komodo Demo App</h1>
         <p>Environment: <span class="env">${APP_ENV}</span></p>
         <p>Running on host: <strong>${hostname}</strong></p>
         <p>Deployed at: <strong>${new Date().toISOString()}</strong></p>
