@@ -1,12 +1,12 @@
-const http = require('http');
-const os = require('os');
+const http = require("http");
+const os = require("os");
 
 const PORT = process.env.PORT || 3000;
-const APP_ENV = process.env.APP_ENV || 'unknown';
+const APP_ENV = process.env.APP_ENV || "unknown";
 const hostname = os.hostname();
 
-const server = http.createServer((req, res) =&gt; {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/html" });
   res.end(`
     &lt;html&gt;
       &lt;head&gt;
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) =&gt; {
         &lt;style&gt;
           body { font-family: sans-serif; max-width: 600px; margin: 100px auto; text-align: center; }
           .env { display: inline-block; padding: 4px 12px; border-radius: 20px;
-                 background: ${APP_ENV === 'production' ? '#22c55e' : '#3b82f6'}; color: white; }
+                 background: ${APP_ENV === "production" ? "#22c55e" : "#3b82f6"}; color: white; }
         &lt;/style&gt;
       &lt;/head&gt;
       &lt;body&gt;
@@ -27,6 +27,6 @@ const server = http.createServer((req, res) =&gt; {
   `);
 });
 
-server.listen(PORT, () =&gt; {
+server.listen(PORT, () => {
   console.log(`Server running on port ${PORT} in ${APP_ENV} environment`);
 });
